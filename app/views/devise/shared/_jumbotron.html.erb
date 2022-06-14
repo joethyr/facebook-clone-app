@@ -1,0 +1,24 @@
+<div class="devise-jumbotron">
+  <div class="shadow px-4 py-5 px-md-5 text-center text-lg-start rounded" style="background-color: rgb(231,235,242)">
+    <div class="container">
+      <div class="row gx-lg-5 align-items-center">
+        <div class="col-lg-6 mb-5 text-center">
+          <h1 class="my-5 display-3 fw-bold ls-tight">
+            <span style="color: #3B5998;">Facebooklet</span>
+          </h1>
+          <h4 style="color: hsl(217, 10%, 50.8%)">
+            an okay way to catch up with friends and others arcoss the globe.
+          </h4>
+        </div>
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <div class="card">
+            <div class="card-body py-5 px-md-5">
+              <%= yield %>
+              <%= render "devise/shared/links" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
