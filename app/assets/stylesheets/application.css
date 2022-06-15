@@ -13,3 +13,78 @@
  *= require_tree .
  *= require_self
  */
+
+.fb-profile {
+  position: relative;
+  width: 100%;
+}
+.profile-img a{
+  bottom: 15px;
+  border-radius: 50%;
+  left: 15px;
+  padding:1px;
+  position: absolute;
+  height: 230px;
+  width: 230px;
+  background: grey;
+  z-index:9;
+}
+.profile-img img {
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.07);
+  height: 230px;
+  width: 230px;
+  object-fit: cover;
+  padding: 3px;
+  border-radius: 50%;
+}
+.profile-name {
+  bottom: 55px;
+  left: 260px;
+  position: absolute;
+}
+.profile-name h2 {
+  color: white;
+  font-size: 32px;
+  line-height: 35px;
+  max-width: 500px;
+  position: relative;
+  text-transform: capitalize;
+}
+
+.fb-header{
+  display: block;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  background: grey;
+}
+.fb-header-menu {
+  border: 1px solid #d3d6db;
+  border-radius: 0 0 3px 3px;
+  height: 45px;
+  width:100%;
+  overflow:hidden;
+}
+
+.fb-header-menu ul {
+    padding-left: 260px;
+}
+.fb-header-menu ul li {
+  display:inline-block;
+}
+.fb-header-menu ul li a {
+  border-right: 1px solid #e9eaed;
+  font-size: 16px;
+  font-weight: bold;
+  height: 100%;
+  line-height: 2.6;
+  padding: 0 25px;
+  color:#3B5998;
+  text-decoration-line: none;
+}
+.fb-header-menu ul li:first-child a {
+  border-left: 1px solid #e9eaed;
+}
