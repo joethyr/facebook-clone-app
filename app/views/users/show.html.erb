@@ -1,26 +1,189 @@
-<div class="col-lg-12">
-  <div class="fb-profile">
-    <div class="fb-header"></div>
-    <div class="profile-img">
-      <a href="#">
-        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="" title="">
-      </a>
-    </div>
-    <div class="profile-name">
-      <h2><%= current_user.name %></h2>
-    </div>
+  <div class="col-md-12 col-lg-12">
+    <div class="fb-profile">
+      <div class="fb-header">
+        <%= image_tag("patrick-tomasso-UeuSuM1M43U-unsplash.jpg") %>
+      </div>
+      <div class="profile-img">
+        <a href="#">
+          <%= image_tag("avatar-g879bd12fa_640.png") %>
+        </a>
+      </div>
+      <div class="profile-name">
+        <h2><%= current_user.name %></h2>
+        <button class="btn btn-primary border">
+          Edit Profile
+        </button>
+      </div>
+      <div class="edit-profile-btn">
 
-    <div class="fb-header-menu">
-      <ul>
-        <li><a href="#">Timeline</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Friends</a></li>
-        <li><a href="#">Photos</a></li>
-        <li><a href="#">More...</a></li>
-      </ul>
+      </div>
+      <div class="fb-header-menu">
+        <ul>
+          <li><a href="#">Timeline</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Friends</a></li>
+          <li><a href="#">Photos</a></li>
+          <li><a href="#">More...</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="profile-page">
+    <div class="row profile-body">
+      <div class="d-md-block col-md-4 col-xl-4">
+        <div class="row">
+          <div>
+            <div class="card about-card">
+              <div class="card-body">
+                <div class="d-flex justify-content-between mb-2">
+                  <h6 class="card-title text-muted">ABOUT ME</h6>
+                </div>
+                <p>Hello, Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Beatae, tempore sunt nostrum nulla ab, itaque, deserunt corporis magni ut neque numquam doloremque cupiditate in quam ipsa possimus! Esse, fuga, repudiandae!</p>
+                <div class="mt-3">
+                  <label class="tx-11 font-weight-bold mb-0 text-muted">works at:</label>
+                  <p>Web Developer</p>
+                </div>
+                <div class="mt-3">
+                  <label class="tx-11 font-weight-bold mb-0 text-muted">education:</label>
+                  <p>The Odin Project</p>
+                </div>
+                <div class="mt-3">
+                  <label class="tx-11 font-weight-bold mb-0 text-muted">current city:</label>
+                  <p>Denver, CO</p>
+                </div>
+                <div class="mt-3">
+                  <label class="tx-11 font-weight-bold mb-0 text-muted">joined:</label>
+                  <p>June 10, 2022</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-margin">
+            <div class="card">
+              <div class="card-body">
+                <h6 class="card-title">My Friends</h6>
+                <div class="latest-photos">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <figure>
+                        <%= image_tag("avatar-g879bd12fa_640.png", class: "img-fluid" )%>
+                      </figure>
+                    </div>
+                    <div class="col-md-4">
+                      <figure>
+                       <%= image_tag("avatar-g879bd12fa_640.png", class: "img-fluid" )%>
+                     </figure>
+                   </div>
+                   <div class="col-md-4">
+                    <figure>
+                     <%= image_tag("avatar-g879bd12fa_640.png", class: "img-fluid" )%>
+                   </figure>
+                 </div>
+                 <div class="col-md-4">
+                  <figure>
+                   <%= image_tag("avatar-g879bd12fa_640.png", class: "img-fluid" )%>
+                 </figure>
+               </div>
+               <div class="col-md-4">
+                <figure>
+                 <%= image_tag("avatar-g879bd12fa_640.png", class: "img-fluid" )%>
+               </figure>
+             </div>
+             <div class="col-md-4">
+              <figure>
+               <%= image_tag("avatar-g879bd12fa_640.png", class: "img-fluid" )%>
+             </figure>
+           </div>
+           <div class="col-md-4">
+            <figure>
+             <%= image_tag("avatar-g879bd12fa_640.png", class: "img-fluid" )%>
+           </figure>
+         </div>
+         <div class="col-md-4">
+          <figure>
+           <%= image_tag("avatar-g879bd12fa_640.png", class: "img-fluid" )%>
+         </figure>
+       </div>
+       <div class="col-md-4">
+        <figure>
+         <%= image_tag("avatar-g879bd12fa_640.png", class: "img-fluid" )%>
+       </figure>
+     </div>
+   </div>
+ </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-8 col-xl-8 middle-wrapper">
+  <div class="row">
+    <div class="col-md-12 grid-margin">
+      <div class="card rounded">
+        <div class="card-header">
+          <div class="d-flex post-actions">
+            <p class="d-none d-md-block ml-2">Post</p>
+            <p class="d-none d-md-block ml-2">Photos</p>
+          </div>
+        </div>
+        <div class="card-body">
+          <input type="text" placeholder="What's on your mind?">
+        </div>
+        <div class="card-footer">
+          <button>Post</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12 grid-margin">
+      <div class="card rounded">
+        <div class="card-header">
+          <div class="d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center">
+             <%= image_tag("avatar-g879bd12fa_640.png", class: "img-xs rounded-circle" )%>
+             <div class="ml-2">
+              <p><%= current_user.name %></p>
+              <p class="tx-11 text-muted">1 min ago</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="mb-3 tx-14">Lorem, ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, odio cumque. Id quod nihil est odio dolores magnam, magni quos quas ea eveniet sunt, ratione dolor exercitationem aliquam odit nam?</p>
+      </div>
+      <div class="card-footer">
+        <div class="d-flex post-actions">
+          <p class="d-none d-md-block ml-2">Like</p>
+          <p class="d-none d-md-block ml-2">Comment</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12 grid-margin">
+    <div class="card rounded">
+      <div class="card-header">
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="d-flex align-items-center">
+           <%= image_tag("avatar-g879bd12fa_640.png", class: "img-xs rounded-circle" )%>
+           <div class="ml-2">
+            <p><%= current_user.name %></p>
+            <p class="tx-11 text-muted">30 mins ago</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <p class="mb-3 tx-14">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro voluptates vero placeat, saepe. Nemo vel sunt officia, sequi. Itaque consectetur, voluptates eaque culpa qui in? Consequuntur officiis optio dolore minima?</p>
+    </div>
+    <div class="card-footer">
+      <div class="d-flex post-actions">
+        <p class="d-none d-md-block ml-2">Like</p>
+        <p class="d-none d-md-block ml-2">Comment</p>
+      </div>
     </div>
   </div>
 </div>
-
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+</div>
+</div>
+</div>
+</div>

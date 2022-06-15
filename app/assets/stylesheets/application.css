@@ -13,10 +13,14 @@
  *= require_tree .
  *= require_self
  */
+html body {
+  background-color: #EAEBEF;
+}
 
 .fb-profile {
   position: relative;
   width: 100%;
+  margin-bottom: 1rem;
 }
 .profile-img a{
   bottom: 15px;
@@ -44,6 +48,7 @@
   left: 260px;
   position: absolute;
 }
+
 .profile-name h2 {
   color: white;
   font-size: 32px;
@@ -70,7 +75,8 @@
 }
 
 .fb-header-menu ul {
-    padding-left: 260px;
+  padding-left: 260px;
+  background-color: white;
 }
 .fb-header-menu ul li {
   display:inline-block;
@@ -87,4 +93,19 @@
 }
 .fb-header-menu ul li:first-child a {
   border-left: 1px solid #e9eaed;
+}
+
+
+.img-xs {
+  width: 37px;
+  height: 37px;
+}
+
+
+.grid-margin {
+  margin-bottom: 1rem;
+}
+
+.about-card {
+  margin-bottom: 1rem;
 }
