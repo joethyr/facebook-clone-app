@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_16_034017) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_16_193842) do
   create_table "comments", force: :cascade do |t|
     t.string "body"
     t.datetime "created_at", null: false
@@ -58,6 +58,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_16_034017) do
     t.string "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id", null: false
+    t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -79,4 +81,5 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_16_034017) do
   add_foreign_key "friendships", "users", column: "friend_a_id"
   add_foreign_key "friendships", "users", column: "friend_b_id"
   add_foreign_key "notifications", "users"
+  add_foreign_key "posts", "users"
 end
