@@ -91,6 +91,7 @@ html body {
   color:#3B5998;
   text-decoration-line: none;
 }
+
 .fb-header-menu ul li:first-child a {
   border-left: 1px solid #e9eaed;
 }
@@ -108,4 +109,17 @@ html body {
 
 .about-card {
   margin-bottom: 1rem;
+}
+
+
+#create-post-header {
+  background-color: white;
+}
+
+.create-post-body .form-control {
+    width: 100%;
+    min-height: 100px;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
 }
