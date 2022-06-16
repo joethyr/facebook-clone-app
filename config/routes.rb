@@ -5,8 +5,7 @@ Rails.application.routes.draw do
   devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
-  get 'users/:id' => 'users#show', as: :user
-  get 'users/index'
+  resources :users
   root to: "posts#index"
 
 end
