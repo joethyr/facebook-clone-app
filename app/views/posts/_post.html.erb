@@ -1,24 +1,30 @@
-  <div class="col-md-12 grid-margin" id="<%= dom_id post %>" >
+  <div class="col-md-12 grid-margin">
     <div class="card rounded">
       <div class="card-header">
-        <div class="d-flex align-items-center justify-content-between">
-          <div class="d-flex align-items-center">
-           <%= image_tag("avatar-g879bd12fa_640.png", class: "img-xs rounded-circle" )%>
-           <div class="ml-2">
-            <p><%= post.user.name %></p>
-            <p class="tx-11 text-muted"><%= post.time_difference %></p>
+        <div class="d-flex flex-row justify-content-between">
+          <div class="d-flex flex-row">
+            <%= image_tag("avatar-g879bd12fa_640.png", class: "img-xs rounded-circle" )%>
+            <div class="post-header-title">
+              <p id="post-user-name"><%= post.user.name %></p>
+              <p class="text-muted" id="post-user-time"><%= post.time_difference %></p>
+            </div>
           </div>
+          <% if current_user.id == post.user_id %>
+            <div>
+              <i class="fa-solid fa-pen-to-square fa-lg mx-2" style="color:#3B5998"></i>
+              <i class="fa-solid fa-trash fa-lg mx-2" style="color:#3B5998"></i>
+            </div>
+          <% end %>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="mb-3 tx-14"><%= post.body %></p>
+      </div>
+      <div class="card-footer">
+        <div class="d-flex justify-content-between" id="card-footer-links">
+          <a href="#" style="color:#3B5998"><i class="fa-solid fa-thumbs-up"></i> Like</a>
+          <button>Reply</button>
         </div>
       </div>
     </div>
-    <div class="card-body">
-      <p class="mb-3 tx-14"><%= post.body %></p>
-    </div>
-    <div class="card-footer">
-      <div class="d-flex post-actions">
-        <p class="d-none d-md-block ml-2">Like</p>
-        <p class="d-none d-md-block ml-2">Comment</p>
-      </div>
-    </div>
   </div>
-</div>

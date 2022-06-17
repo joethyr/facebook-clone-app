@@ -4,6 +4,6 @@ class Post < ApplicationRecord
   has_many :comments, as: :commentable
 
   def time_difference
-    "#{TimeDifference.between(updated_at, Time.current).humanize} ago"
+    "Posted #{TimeDifference.between(updated_at, Time.current).humanize} ago"
   end
 end
