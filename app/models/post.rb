@@ -3,7 +3,7 @@ class Post < ApplicationRecord
   has_many :likes, as: :likeable, dependent: :destroy
   has_many :comments, as: :commentable
 
-  def post_time_difference
-    TimeDifference.between(created_at, Time.current).humanize
+  def time_difference
+    "#{TimeDifference.between(updated_at, Time.current).humanize} ago"
   end
 end

@@ -5,8 +5,8 @@
           <div class="d-flex align-items-center">
            <%= image_tag("avatar-g879bd12fa_640.png", class: "img-xs rounded-circle" )%>
            <div class="ml-2">
-            <p><%= @user.name %></p>
-            <p class="tx-11 text-muted">30 mins ago</p>
+            <p><%= post.user.name %></p>
+            <p class="tx-11 text-muted"><%= post.time_difference %></p>
           </div>
         </div>
       </div>

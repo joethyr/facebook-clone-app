@@ -1,11 +1,11 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :index, :edit]
-
-  before_action :set_post, only: %i[ show edit update destroy ]
+  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :correct_user, only: [:edit, :update, :destroy]
 
   # GET /posts or /posts.json
   def index
-    @posts = Post.all
+    @posts = Post.all.order(updated_at: :desc)
   end
 
   # GET /posts/1 or /posts/1.json
@@ -56,6 +56,12 @@ class PostsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to posts_url, notice: "Post was successfully destroyed." }
       format.json { head :no_content }
+    end
+  end
+
+  def correct_user
+    if current_user.id != @post.user_id
+      redirect_to root_url, alert: "You are not authorized to edit this post."
     end
   end
 
