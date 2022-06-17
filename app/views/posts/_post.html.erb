@@ -12,7 +12,7 @@
           <% if current_user.id == post.user_id %>
           <div class="d-flex flex-row align-items-center">
             <%= link_to "", edit_post_path(post), class: "fa-solid fa-pen-to-square fa-lg mx-3", style: "color:#3B5998" %>
-            <%= button_to "Delete", @post, method: :delete, class: "btn btn-danger btn-sm rounded-0" %>
+            <%= button_to "Delete", post, method: :delete, class: "btn btn-danger btn-sm round" %>
           </div>
           <% end %>
         </div>
