@@ -2,7 +2,7 @@
     <div class="card rounded">
       <div class="card-header">
         <div class="d-flex flex-row justify-content-between">
-          <div class="d-flex flex-row">
+          <div class="d-flex flex-row ">
             <%= image_tag("avatar-g879bd12fa_640.png", class: "img-xs rounded-circle" )%>
             <div class="post-header-title">
               <p id="post-user-name"><%= post.user.name %></p>
@@ -10,10 +10,10 @@
             </div>
           </div>
           <% if current_user.id == post.user_id %>
-            <div>
-              <i class="fa-solid fa-pen-to-square fa-lg mx-2" style="color:#3B5998"></i>
-              <i class="fa-solid fa-trash fa-lg mx-2" style="color:#3B5998"></i>
-            </div>
+          <div class="d-flex flex-row align-items-center">
+            <%= link_to "", edit_post_path(post), class: "fa-solid fa-pen-to-square fa-lg mx-3", style: "color:#3B5998" %>
+            <%= button_to "Delete", @post, method: :delete, class: "btn btn-danger btn-sm rounded-0" %>
+          </div>
           <% end %>
         </div>
       </div>
